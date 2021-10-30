@@ -1,4 +1,4 @@
-- title: KITAB E-READER
+- title: E-Reader
   url: none
   code: private
   icon: /img/android.png
@@ -11,7 +11,7 @@
     - item: OkHttp
     - item: ButterKnife
 
-- title: RFID-OPERATED DOOR LOCK
+- title: RFID Door-Lock
   url: https://alimorshid.site/2018/02/02/rfid-operated-door-lock.html
   code: https://github.com/aliofye/rfid-door-lock
   icon: /img/rfid.png
@@ -20,7 +20,7 @@
     - item: Arduino Framework
     - item: C++
 
-- title: PERSONAL WEBPAGE
+- title: Personal Webpage
   url: none
   code: https://github.com/aliofye/aliofye.github.io
   icon: /img/webpage.png
@@ -31,7 +31,7 @@
     - item: HTML
     - item: CSS
     
-- title: ENCRYPT.ASM
+- title: encrypt.asm
   url: none
   code: https://github.com/aliofye/encrypt.asm
   icon: /img/webpage.png

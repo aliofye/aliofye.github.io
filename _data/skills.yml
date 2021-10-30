@@ -1,38 +1,21 @@
 - category: Languages
   list:
-    - item: Java
-    - item: C++/C
     - item: JavaScript
-    - item: Python
-    - item: SQL
+    - item: C++/C
+    - item: Java
     - item: Swift/Objective C
+    - item: Python
 
-- category: Frameworks
+- category: Platform
   list:
-    - item: Android
-    - item: iOS
     - item: Node
     - item: React
-    - item: Jekyll
-    - item: Arduino
+    - item: Android
+    - item: iOS
 
-- category: Tools
+- category: Frameworks/Tools
   list:
-    - item: Git & Github
-    - item: Bash
-    - item: Sublime Text 3
-    - item: Vim
-    - item: MySQL Workbench
-
-- category: IDEs
-  list:
-    - item: Android Studio
-    - item: XCode
-    - item: IntelliJ IDEA
-    - item: Visual Studio
-
-- category: Platforms
-  list:
-    - item: macOS (Main)
-    - item: Linux
-    - item: Windows
+    - item: AWS
+    - item: Jenkins CI
+    - item: Postgresql
+    - item: Snowflake
