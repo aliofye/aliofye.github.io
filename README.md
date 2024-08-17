@@ -6,5 +6,7 @@ Personal Webpage
 2. Install [RubyGems](https://rubygems.org/)
 
 ## Getting Started
-1. Run `gem install jekyll bundler`
+1. `gem install jekyll bundler`
+2. `bundle update`
+3. `bundle install`
 2. Navigate to root of cloned repository and run `jekyll serve`

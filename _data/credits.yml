@@ -13,6 +13,11 @@
   category: Font
   url: https://fonts.google.com/specimen/Zilla+Slab
 
+- name: Playfair Display
+  author: Claus Eggers Sørensen
+  category: Font
+  url: https://fonts.google.com/specimen/Playfair+Display
+
 - name: Pulsating Text
   author: Kevin Leary
   category: CSS

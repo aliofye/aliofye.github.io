@@ -1,21 +1,30 @@
 - category: Languages
   list:
+    - item: TypeScript
     - item: JavaScript
     - item: C++/C
     - item: Java
     - item: Swift/Objective C
     - item: Python
 
-- category: Platform
+- category: Frameworks
   list:
     - item: Node
+    - item: Express
+    - item: NestJS
     - item: React
+    - item: React Native
     - item: Android
     - item: iOS
 
-- category: Frameworks/Tools
+- category: Misc.
   list:
+    - item: Harness
+    - item: Jenkins
+    - item: Git
+    - item: Docker
     - item: AWS
-    - item: Jenkins CI
-    - item: Postgresql
+    - item: PostgreSQL
+    - item: Redis
+    - item: SQLite
     - item: Snowflake

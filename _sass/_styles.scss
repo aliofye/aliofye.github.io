@@ -19,6 +19,7 @@ $primary-font: 'Zilla Slab', serif;
 $title-font: 'Bungee Shade', cursive;
 $subtitle-font: 'Bungee Shade', cursive;
 $header-font: 'Zilla Slab', serif;
+$blog-font: 'Playfair Display', serif;
 $code-font: monospace;
 
 
@@ -112,7 +113,7 @@ blockquote {
 	margin-top: 0;
     padding-left: 2%;
     text-align: justify;
-    text-justify: inter-word;
+    text-justify: auto;
     font-size: x-large;
 	border-left: $secondary-border;
 }
@@ -406,8 +407,9 @@ h2:before {
 }
 
 .post_style {
-	padding-left: 25%;
-	padding-right: 25%;
+	font-family: $blog-font;
+	padding-left: 15%;
+	padding-right: 15%;
 	min-height: 100%;
 	position: relative; 
 }
@@ -460,6 +462,7 @@ h2:before {
 	}
 
 	.post_style {
+		font-family: $blog-font;
 		padding-left: 5%;
 		padding-right: 5%;
 	}
