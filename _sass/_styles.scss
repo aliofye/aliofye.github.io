@@ -5,6 +5,7 @@
 $graphite: #242620;
 $light-graphite:  #272822;
 $lighter-graphite: #383428;
+$gray: #75715E;
 $neon-pink: #F92672;
 $neon-blue: #66D9EF;
 $neon-green: #A6E22E;
@@ -266,18 +267,25 @@ h2:before {
 	text-transform: uppercase;
 }
 
-.job_title {
+.job_company {
 	background-color: $neon-blue;
 	color: $abyss;
 	font-weight: bold;
 	padding: 2px;
 }
 
-.job_details {
-	color: $snow;
-	padding: 5px;
+.job_title {
+	color: $gray;
 	font-weight: lighter;
 	font-size: large;
+	padding: 2px;
+}
+
+.job_details {
+	color: $snow;
+	font-weight: lighter;
+	font-size: large;
+	padding: 0;
 }
 
 #name {
@@ -434,7 +442,7 @@ h2:before {
     blockquote {
         margin-left: 10px;
         margin-right: 10px;
-        text-align: left;
+        text-align: auto;
         font-size: 1em;
     }
 

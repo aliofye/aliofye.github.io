@@ -7,11 +7,22 @@
       {% for entry in site.data.experience %}
       <div class="experience">
         <blockquote>
-          <span class="job_title">{{ entry.company }}</span><br>
-          <div class="job_details">
-            {{ entry.position }} <br>
-            {{ entry.time }} <br>
-            {{ entry.city }}
+          <div>
+            <div>
+              <span class="job_company">{{ entry.company }}</span><br>
+            </div>
+            <div>
+              <span class="job_title">{{ entry.position }}</span>
+            </div>
+            <div>
+              <span class="job_details"><p>{{ entry.description }}</p></span>
+            </div>
+            <div>
+              <span class="job_title">{{ entry.time }}</span>
+            </div>
+            <div>
+              <span class="job_title">{{ entry.city }}</span>
+            </div>
           </div>
          </blockquote>    	 
    	  </div>
