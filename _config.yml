@@ -4,11 +4,12 @@ graduation_date: Fall 2018
 email: aliofye@gmail.com
 description: >- # this means to ignore newlines until "url:"
   Personal website of an aspiring software engineer.
-url: "https://alimorshid.site"
+url: "https://ali.ooo"
 baseurl: ""
+favicon: "/img/favicon.ico"
 twitter_username: aliofye
 github_username:  aliofye
-resume: https://docs.google.com/document/d/1eHqHSC6qZx8mHQCzfY2F-kwUuQlxYL5ShL7OXlrt4eQ/edit?usp=sharing
+resume:
 sass:
     sass_dir: _sass
 

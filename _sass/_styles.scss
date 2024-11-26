@@ -343,8 +343,8 @@ h2:before {
 
 .card_description {
 	padding: 10px;
-  overflow: hidden;
-  flex-grow: 2;
+	overflow: hidden;
+	flex-grow: 2;
 }
 
 .card_links {
@@ -440,14 +440,10 @@ h2:before {
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     blockquote {
-        margin-left: 10px;
-        margin-right: 10px;
-        text-align: auto;
+        margin-left: 5px;
+        margin-right: 0px;
+        text-align: left;
         font-size: 1em;
-    }
-
-    .section_content {
-    	padding-left: 10px;
     }
 
     .grid {
