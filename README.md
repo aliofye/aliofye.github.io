@@ -9,4 +9,4 @@ Personal Webpage
 1. `gem install jekyll bundler`
 2. `bundle update`
 3. `bundle install`
-2. Navigate to root of cloned repository and run `jekyll serve`
+2. Navigate to root of cloned repository and run `jekyll serve --livereload`
