@@ -11,12 +11,37 @@ $neon-blue: #66D9EF;
 $neon-green: #A6E22E;
 $neon-orange: #FD971F;
 $snow: #fff;
+$off-white: #f0f2d5;
 $abyss: #000;
 
 /* 
 	FONTS
  */
-$primary-font: 'Zilla Slab', serif;
+/* Pop-in Animation for Paragraphs */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+p {
+  opacity: 0;
+  animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  
+  /* Stagger the animation for multiple paragraphs */
+  @for $i from 1 through 10 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+$primary-font: 'Futura', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $title-font: 'Bungee Shade', cursive;
 $subtitle-font: 'Bungee Shade', cursive;
 $header-font: 'Zilla Slab', serif;
@@ -37,7 +62,7 @@ $text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 
 $primary-border: 5px solid #F92672;
 $secondary-border: 2.5px solid #66D9EF;
-$code-border: 1px solid $snow;
+$code-border: 1px solid $off-white;
 
 $card-height: 280px;
 $card-width: 250px;
@@ -52,7 +77,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  color: $snow;
+  color: $off-white;
   background-color: $graphite;
   font-family: $primary-font;
   font-size: $primary-font-size;
@@ -90,7 +115,7 @@ a {
 }
 
 a:hover {
-  		color: $snow;
+  		color: $off-white;
   		border-bottom: 3px solid $neon-pink;
 }
 
@@ -99,7 +124,7 @@ a:active {
 }
 
 blockquote > a, p > a, h4 > a {
-	color: $snow;
+	color: $off-white;
 	border-bottom: 3px solid $neon-pink;
 	text-decoration: none;
 }
@@ -112,10 +137,10 @@ blockquote > a:hover, p > a:hover, h4 > a:hover {
 
 blockquote {
 	margin-top: 0;
-    padding-left: 2%;
-    text-align: justify;
-    text-justify: auto;
-    font-size: x-large;
+  padding-left: 2%;
+  text-align: justify;
+  text-justify: auto;
+  font-size: x-large;
 	border-left: $secondary-border;
 }
 
@@ -123,7 +148,7 @@ code, mark {
 	padding: 5px;
 	font-family: $code-font;
 	font-size: $code-font-size;
-	color: $snow;
+	color: $off-white;
 	background-color: $lighter-graphite;
 }
 
@@ -134,7 +159,7 @@ pre > code {
 	padding:0;
 	overflow: scroll;
 	padding: 0;
-	color: $snow;
+	color: $off-white;
 	background-color: $lighter-graphite; 
 	box-shadow: 3px 3px 3px $abyss;
 }
@@ -145,7 +170,6 @@ footer {
 	text-align: center;
 	font-size: smaller;
 	font-family: $title-font;
-	font-weight: bold;
 	color: $neon-pink;
 	background-color: $light-graphite;
 	border-top: 2px solid rgba(0, 0, 0, 0.2);
@@ -215,6 +239,16 @@ h2:before {
  	}
 }
 
+@keyframes wiggle {
+  0% { transform: rotate(0deg) translateY(0); }
+  15% { transform: rotate(-6deg) translateY(-1px); }
+  30% { transform: rotate(6deg) translateY(0); }
+  45% { transform: rotate(-6deg) translateY(1px); }
+  60% { transform: rotate(6deg) translateY(0); }
+  75% { transform: rotate(-3deg) translateY(-1px); }
+  100% { transform: rotate(0deg) translateY(0); }
+}
+
 
 /* 
 	SECTION 
@@ -223,7 +257,6 @@ h2:before {
 .section_title {
 	font-family: $title-font;
 	font-size: $title-font-size;
-	font-weight: bold;
 	color: $neon-pink;
 }
 
@@ -231,7 +264,6 @@ h2:before {
  	text-decoration: none;
  	font-family: $subtitle-font;
  	font-size: $subtitle-font-size;
- 	font-weight: bold;
 	color: $neon-green;
  }
 
@@ -247,7 +279,7 @@ h2:before {
  */
 
 #bars {
-	color: $snow;
+	color: $off-white;
 }
 
 /* 
@@ -270,7 +302,6 @@ h2:before {
 .job_company {
 	background-color: $neon-blue;
 	color: $abyss;
-	font-weight: bold;
 	padding: 2px;
 }
 
@@ -282,23 +313,116 @@ h2:before {
 }
 
 .job_details {
-	color: $snow;
+	color: $off-white;
 	font-weight: lighter;
 	font-size: x-large;
 	padding: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .xp-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .xp-card__meta {
+    flex-wrap: wrap;
+  }
+}
+
 #name {
 	font-family: $title-font;
 	font-size: 2em;
-	font-weight: bold;
-	color: $snow;
+	color: $off-white;
+}
+
+/* Hover bubble next to name */
+.name-with-bubble {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 0.25em;
+}
+
+.hover-bubble {
+  position: absolute;
+  left: -80px;
+  top: -40px;
+  transform: scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  animation: bubble-pop 520ms cubic-bezier(0.22, 1, 0.36, 1) 1s both;
+  z-index: 2;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+}
+
+.hover-bubble-inner {
+  width: 72px;
+  height: 72px;
+  border-radius: 9999px;
+  padding: 4px;
+  background: $lighter-graphite;
+  box-shadow: inset 0 0 8px rgba(255,255,255,0.06);
+}
+
+.hover-bubble-inner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 9999px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .hover-bubble {
+    display: none;
+  }
+}
+
+.hover-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: $graphite;
+  color: $abyss;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: 2px solid $off-white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.35);
+  z-index: 3;
+  animation: wave 1.6s ease-in-out infinite;
+  transform-origin: 60% 60%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes bubble-pop {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { opacity: 1; transform: scale(1.06); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hover-bubble { animation: none; opacity: 1; transform: none; }
+  .hover-badge { animation: none; }
 }
 
 .bouncy_link {
 	font-family: $subtitle-font;
 	font-size: 20px;
-	font-weight: bold;
 	color: $neon-green;
 }
 
@@ -310,6 +434,19 @@ h2:before {
 	align-items: top;
 }
 
+.experience_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: $primary-font-size;
+  margin: 16px 0;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
 .card {
 	display: flex;
 	flex-flow: column;
@@ -319,26 +456,21 @@ h2:before {
 	width: $card-width;
 	margin: 10px;
 	padding: 10px;
-	border-top: 2px solid $neon-pink;
-	border-radius: 5px 5px 0 0;
+  border-radius: 12px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card_header {
-	overflow: hidden;
-	font-family: $header-font;
-	flex-grow: 0;
-	justify-content: center;
-	align-items: center;
-	box-shadow: inset 0 0 5px #000, 0 1px 1px rgba(255, 255, 255, 0.1);
-	border-radius: 10px;
 	width: 100%;
 	height: 30px;
 	padding: 5px;
-}
-
-.card_title {
-	color: $snow;
+	justify-content: center;
+	text-align: center;
+	background-color: $lighter-graphite;
+	color: $gray;
+	border-radius: 10px;
+	box-shadow: inset 0 0 5px #000, 0 1px 1px rgba(255, 255, 255, 0.1);
+	flex-grow: 0;
 }
 
 .card_description {
@@ -347,27 +479,14 @@ h2:before {
 	flex-grow: 2;
 }
 
-.card_links {
-	width: 100%;
-	height: 30px;
-	padding: 5px;
-	justify-content: center;
-	align-items: center;
-	background-color: $lighter-graphite;
-	border-radius: 10px;
-	box-shadow: inset 0 0 5px #000, 0 1px 1px rgba(255, 255, 255, 0.1);
-	flex-grow: 0;
-}
-
 .img_links {
 	display: inline-block;
 	margin: 2px;
+  filter: brightness(0.5);
 }
 
 .adding_projects {
 	padding: 10px;
-	color: #5b502c;
-	opacity: 5;
 }
 
 #copyright {
@@ -397,7 +516,7 @@ h2:before {
 	font-family: $title-font;
 	font-weight: bold;
 	font-size: 1.75em;
-	color: $snow;
+	color: $off-white;
 }
 
 #blog_tag {
@@ -454,16 +573,13 @@ h2:before {
 
     .card_header {
     	font-family: $primary-font;
-		font-weight: bold;
     }
 
     .skills {
-		text-align: center;
+		  text-align: left;
 	}
 
-	.blog_style {
-		text-align: left;
-	}
+  .blog_style { text-align: left; }
 
 	.post_style {
 		font-family: $blog-font;

@@ -6,12 +6,12 @@
       {% for project in site.data.projects %}
     	<div class="card">
     		<div class="card_header">
-          <div class="card_title center_text"> {{ project.title }} </div>
+          <div class="center_text"> {{ project.title }} </div>
     		</div>
     		<div class="card_description center_text">
       		{{ project.description }}
     		</div>
-        <div class="card_links center_text">
+        <div class="center_text">
           <!-- github link -->
           {% if project.code %}
             <a href="{{ project.code }}">
@@ -35,13 +35,4 @@
     	{% endfor %}
     </div>
   </div>
-  <!-- <div class=" adding_projects center_text"> 
-    <div class="loading">
-      <div class="loading-dot"></div>
-      <div class="loading-dot"></div>
-      <div class="loading-dot"></div>
-      <div class="loading-dot"></div>
-    </div>
-    In the process of adding all my projects, stay tuned.
-  </div> -->
 </section>

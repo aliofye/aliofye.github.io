@@ -5,27 +5,10 @@
       <br><br>
     <div class="list">
       {% for entry in site.data.experience %}
-      <div class="experience">
-        <blockquote>
-          <div>
-            <div>
-              <span class="job_company">{{ entry.company }}</span><br>
-            </div>
-            <div>
-              <span class="job_title">{{ entry.position }}</span>
-            </div>
-            <div>
-              <span class="job_details"><p>{{ entry.description }}</p></span>
-            </div>
-            <div>
-              <span class="job_title">{{ entry.time }}</span>
-            </div>
-            <div>
-              <span class="job_title">{{ entry.city }}</span>
-            </div>
-          </div>
-         </blockquote>    	 
-   	  </div>
+      <article class="experience_card">
+        <header class="card_header">{{ entry.position }}</header>
+        <p class="card_description">{{ entry.description }}</p>
+      </article>
       {% endfor %}
     </div>
   </div>
