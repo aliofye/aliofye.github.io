@@ -6,8 +6,15 @@
     <div class="list">
       {% for entry in site.data.experience %}
       <article class="experience_card">
+
         <header class="card_header">{{ entry.position }}</header>
         <p class="card_description">{{ entry.description }}</p>
+        <div class="time-container">
+          <div class="company-logo">
+            <img src="{{ site.baseurl }}/img/sqr.svg" alt="SQUIRE" />
+          </div>
+          <p class="card_time">{{ entry.time }}</p>
+        </div>
       </article>
       {% endfor %}
     </div>

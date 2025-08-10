@@ -1,18 +1,18 @@
 - company: SQUIRE
   city: Remote
-  time: May 2023 - Present
+  time: MAY 2023 - XXX 202X
   position: Senior Engineering Manager
   description: >
     Leading the Client Booking Team, managing 6 engineers across web, backend, iOS, and Android, launching “Group Appointments,” generating $60K from 24K+ clients, and “Client Reviews,” collecting 14,400+ reviews for 2,700 shops. Experienced in Node.js, React, TypeScript, JavaScript, Redis, Postgres, AWS, and Microservices.
 - company: SQUIRE
   city: Buffalo, NY
-  time: Jun 2021 - May 2023
+  time: JUN 2021 - MAY 2023
   position: Engineering Manager
   description: >
     Managed 5 engineers on the Client Experience Team across backend, web, iOS, and Android, leading an SMS vendor migration from Twilio to Messagebird that saved $1M+ annually. Increased SMS deliverability from 67% to 95% by shifting to brand-specific TFNs, saving an additional $130K yearly. Provided backend support for SQUIRE “Chat” on web. Also managed 3 engineers on the Admin Team, adding Level 2 and Level 3 data for credit card transactions, resulting in $32K+ in annual savings on network fees.
 - company: SQUIRE
   city: Buffalo, NY
-  time: Mar 2018 - Jun 2021
+  time: MAR 2018 - JUN 2021
   position: Software Engineer
   description: >
     Implemented Reserve with Google integration, enabling 400K+ clients to book 1M+ appointments via Google Maps and generating $1M+ in booking fees. Provided backend support for the SQUIRE app on iOS and Android, achieving 800K+ downloads and a 4.9 App Store rating. Launched “Smart Booking Reminders,” generating $17M+ in GMV from 500K+ clients, and developed “Link Your Instagram,” allowing 12K+ barbers to showcase portfolios on booking platforms.
